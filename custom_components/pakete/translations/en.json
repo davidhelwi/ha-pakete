@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Parcels (shipping emails)",
+        "data": {
+          "host": "IMAP server",
+          "port": "Port",
+          "username": "Username",
+          "password": "Password",
+          "folders": "Folders (comma-separated)"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Login failed",
+      "cannot_connect": "Cannot reach IMAP server"
+    },
+    "abort": {
+      "already_configured": "This mailbox is already configured"
+    }
+  }
+}

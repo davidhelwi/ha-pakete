@@ -1,0 +1,23 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pakete (Versandmails)",
+        "data": {
+          "host": "IMAP-Server",
+          "port": "Port",
+          "username": "Benutzername",
+          "password": "Passwort",
+          "folders": "Ordner (kommagetrennt)"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Anmeldung fehlgeschlagen",
+      "cannot_connect": "IMAP-Server nicht erreichbar"
+    },
+    "abort": {
+      "already_configured": "Dieses Postfach ist schon eingerichtet"
+    }
+  }
+}
