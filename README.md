@@ -28,7 +28,11 @@ Einstellungen → Geräte & Dienste → **Integration hinzufügen** → „Paket
 | Benutzername, Passwort | Zugang zum Postfach. Bei Gmail, iCloud, Outlook und anderen mit Zwei-Faktor ein **App-Passwort** verwenden |
 | Ordner | kommagetrennt, z. B. `INBOX, Shopping`. Nur nötig, wenn Versandmails per Filter in Unterordner sortiert werden |
 
-Abgefragt wird **stündlich**, ausgewertet werden die Mails der letzten 7 Tage.
+Abgefragt wird **stündlich**, ausgewertet werden die Mails der letzten 7 Tage. Die Sensoren füllen sich also erst nach dem ersten Abruf direkt beim Einrichten.
+
+Häufige IMAP-Server: Gmail `imap.gmail.com`, iCloud `imap.mail.me.com`, Outlook/Hotmail `outlook.office365.com`, GMX `imap.gmx.net`, Web.de `imap.web.de`, T-Online `secureimap.t-online.de`. Bei GMX und Web.de muss IMAP in den Postfach-Einstellungen erst eingeschaltet werden.
+
+Passwort geändert? Integration löschen und neu hinzufügen.
 
 ## Entitäten
 
@@ -93,6 +97,8 @@ mode: queued
 
 - Erkannt wird nur am **Betreff**. Ändert ein Versanddienst seine Betreffzeilen, wird die Mail nicht mehr erkannt. Nicht erkannte Mails stehen mit Log-Level `debug` im Log („nicht erkannt: …“).
 - DPD und Hermes nennen im Betreff keine Sendungsnummer. Mehrere Pakete desselben Dienstes werden deshalb gezählt, nicht einzeln zugeordnet.
+- Erkannt wird nur am Original-Absender (z. B. `@dhl.de`). Weitergeleitete Mails werden nicht erkannt.
+- Nur **ein** Postfach pro Home Assistant, weil die Entitäten feste Namen haben.
 - Andere Dienste (GLS, UPS, Post) und andere Sprachen werden noch nicht unterstützt.
 
 ## Mitmachen
